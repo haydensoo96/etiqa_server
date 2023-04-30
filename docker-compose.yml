@@ -1,0 +1,49 @@
+version: "3.9"
+
+services:
+  etiqa_be:
+    container_name: etiqa_be
+    image: etiqa_be
+    build:
+      context: ./etiqa_be
+    ports:
+      - "3000:3000"
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - main
+
+  etiqa_fe:
+    container_name: etiqa_fe
+    image: etiqa_fe
+    build:
+      context: ./etiqa_fe
+    ports:
+      - "4200:4200"
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - main
+
+  mysql:
+    container_name: mysql
+    image: mysql
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQLDB_USER=root
+      - MYSQL_ROOT_PASSWORD=devguy123
+      - MYSQL_DATABASE=etiqadb
+    volumes:
+      - ./data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    networks:
+      - main
+networks:
+  main:

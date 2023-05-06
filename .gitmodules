@@ -1,0 +1,7 @@
+[submodule "etiqa"]
+	path = etiqa
+	url = https://github.com/haydensoo96/etiqa.git
+
+[submodule "etiqa-fe"]
+	path = etiqa-fe
+	url = https://github.com/haydensoo96/etiqa-fe.git

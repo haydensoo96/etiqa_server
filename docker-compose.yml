@@ -5,7 +5,7 @@ services:
     container_name: etiqa_be
     image: etiqa_be
     build:
-      context: ./etiqa_be
+      context: ./etiqa
     ports:
       - "3000:3000"
     depends_on:

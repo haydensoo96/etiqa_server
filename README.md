@@ -1,7 +1,7 @@
 # Etiqa Server
 
 Step to start the docker container contains of 
-  - git submodule update --recursive --remote (pull all submodules for first time)
+  - git submodule update --init --recursive (pull all submodules for first time)
   - etiqa_be (NodeJs ExpressJs Sequelize ORM)
   - etiqa_fe (Angular)
   - mysql (Database Server)

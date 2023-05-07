@@ -14,7 +14,7 @@ The docker will setup all environment. Once ready the apps can access by followi
 - etiqa_fe - localhost:4200
 - mysql - localhost:3306
 
-#AWS EC2 Note
+# AWS EC2 Note
 - Clone Repo
 - Install NPM
 - Install MySql
@@ -24,3 +24,8 @@ The docker will setup all environment. Once ready the apps can access by followi
 - Do Port Forwarding on Instance to 3000. (sudo iptables -A PREROUTING -t nat -p tcp --dport 3000 -j REDIRECT --to-ports 3000
 )
 - Sample Setup endpoint http://18.141.205.181:3000/
+
+# AWS S3 Hosting for Front-end
+- Upload Build file from etiqa-fe to S3 Bucket
+- Config it to a statis web
+- Start using it. Sample - http://etiqa-fe.s3-website-ap-southeast-1.amazonaws.com/

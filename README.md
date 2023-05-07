@@ -13,3 +13,14 @@ The docker will setup all environment. Once ready the apps can access by followi
 - etiqa_be - localhost:3000
 - etiqa_fe - localhost:4200
 - mysql - localhost:3306
+
+#AWS EC2 Note
+- Clone Repo
+- Install NPM
+- Install MySql
+- Install PM2
+- Start bin/api.js with PM2
+- Update Inbound Rule of EC2
+- Do Port Forwarding on Instance to 3000. (sudo iptables -A PREROUTING -t nat -p tcp --dport 3000 -j REDIRECT --to-ports 3000
+)
+- Sample Setup endpoint http://18.141.205.181:3000/

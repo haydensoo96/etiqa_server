@@ -29,3 +29,6 @@ The docker will setup all environment. Once ready the apps can access by followi
 - Upload Build file from etiqa-fe to S3 Bucket
 - Config it to a statis web
 - Start using it. Sample - http://etiqa-fe.s3-website-ap-southeast-1.amazonaws.com/
+
+# Postman Collection
+https://api.postman.com/collections/12671235-5995928a-a8ff-4b80-a0ba-05f312b4feba?access_key=PMAT-01GZZD06Q02V7NKW4NRQ4VE3DW
